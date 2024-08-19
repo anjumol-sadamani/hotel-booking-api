@@ -21,7 +21,7 @@ class BookingService {
             return id;        
              });
 
-                logger.info('Booking created', { bookingId: result, room_id, email, booking_date });
+            logger.info('Booking created', { bookingId: result, room_id, email, booking_date });
             return result;
         } catch (error) {
             logger.error('Error in createBooking', { error: error.message, room_id, email, booking_date });
