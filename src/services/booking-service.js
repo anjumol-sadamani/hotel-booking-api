@@ -21,7 +21,7 @@ class BookingService {
             return id;        
              });
 
-            logger.info('Booking created', { bookingId: result, room_id, email, booking_date });
+                logger.info('Booking created', { bookingId: result, room_id, email, booking_date });
             return result;
         } catch (error) {
             logger.error('Error in createBooking', { error: error.message, room_id, email, booking_date });
@@ -37,7 +37,7 @@ class BookingService {
                     'room_id',
                     'email',
                     'booking_date',
-                    'confirmed'
+                    'is_confirmed'
                 ]);
     
             if (filters.email) {
@@ -45,15 +45,14 @@ class BookingService {
             }
     
             if (filters.status) {
-                query.where('confirmed', filters.status === 'confirmed');
-            }
-    
-            if (filters.startDate) {
-                query.where('booking_date', '>=', filters.startDate);
-            }
-    
-            if (filters.endDate) {
-                query.where('booking_date', '<=', filters.endDate);
+                switch (filters.status.toLowerCase()) {
+                    case 'confirmed':
+                        query.where('bookings.is_confirmed', true);
+                        break;
+                    case 'not_confirmed':
+                        query.where('bookings.is_confirmed', false);
+                        break;
+                }
             }
     
             query.orderBy('booking_date', 'asc');
@@ -64,7 +63,7 @@ class BookingService {
     
             const bookings = await query;
     
-            const totalCount = await knex('bookings').count('* as count').first();
+            const totalCount = await knex('bookings').count('id as count').first();
     
             return {
                 bookings,
@@ -85,7 +84,7 @@ class BookingService {
             return await knex.transaction(async (trx) => {
                 const updatedRows = await trx('bookings')
                     .where({ id: bookingId })
-                    .update({ confirmed: true });
+                    .update({ is_confirmed: true });
 
                 if (updatedRows === 0) {
                     throw new Error('Booking not found');

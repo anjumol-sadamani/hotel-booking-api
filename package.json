@@ -4,7 +4,6 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js",
     "test": "jest",
     "db-reset": "rm -f hotel.db && echo 'Database file deleted' && npx knex migrate:latest"
 

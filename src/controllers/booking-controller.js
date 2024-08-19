@@ -50,8 +50,6 @@ exports.getAllBookings = async (req, res) => {
         const {
             email,
             status,
-            startDate,
-            endDate,
             page = 1,
             pageSize = 10
         } = req.query;
@@ -59,8 +57,6 @@ exports.getAllBookings = async (req, res) => {
         const filters = {
             email,
             status,
-            startDate,
-            endDate,
             page: parseInt(page),
             pageSize: parseInt(pageSize)
         };

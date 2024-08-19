@@ -33,6 +33,7 @@ exports.up = async function(knex) {
           table.integer('booking_id').unsigned().references('id').inTable('bookings').notNullable();;
           table.decimal('amount', 10, 2).notNullable().defaultTo(100.00);
           table.timestamp('created_at').defaultTo(knex.fn.now());
+          table.index('booking_id');
       });
   }
 };
