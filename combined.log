@@ -1,0 +1,101 @@
+{"level":"info","message":"Server is running on port 3000","service":"hotel-booking-api","timestamp":"2024-08-16 23:59:06"}
+{"level":"info","message":"Server is running on port 3000","service":"hotel-booking-api","timestamp":"2024-08-17 00:02:20"}
+{"booking_date":"2023-08-25","level":"warn","message":"Booking attempt with invalid date","service":"hotel-booking-api","timestamp":"2024-08-17 00:02:29"}
+{"bookingId":4,"booking_date":"2025-08-25","email":"guest@example.com","level":"info","message":"Booking created","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-17 00:02:39"}
+{"level":"info","message":"Email sent to guest@example.com: Confirm your booking at /booking/confirm/4","service":"hotel-booking-api","timestamp":"2024-08-17 00:02:39"}
+{"level":"info","message":"Server is running on port 3000","service":"hotel-booking-api","timestamp":"2024-08-17 00:05:51"}
+{"booking_date":"2025-08-25","level":"warn","message":"Booking attempt for unavailable room","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-17 00:05:55"}
+{"level":"info","message":"Server is running on port 3000","service":"hotel-booking-api","timestamp":"2024-08-17 10:19:21"}
+{"booking_date":"2025-08-25","level":"warn","message":"Booking attempt for unavailable room","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-17 10:19:59"}
+{"booking_date":"2023-12-25","email":"test@example.com","error":"trx is not a function","level":"error","message":"Error in createBooking","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-19 11:41:25"}
+{"booking_date":"2023-12-25","email":"test@example.com","error":"trx is not a function","level":"error","message":"Error in createBooking","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-19 11:41:25"}
+{"booking_date":"2023-12-25","email":"test@example.com","error":"trx is not a function","level":"error","message":"Error in createBooking","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-19 11:41:25"}
+{"booking_date":"2023-12-25","email":"test@example.com","error":"trx is not a function","level":"error","message":"Error in createBooking","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-19 11:42:52"}
+{"booking_date":"2023-12-25","email":"test@example.com","error":"trx is not a function","level":"error","message":"Error in createBooking","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-19 11:42:52"}
+{"booking_date":"2023-12-25","email":"test@example.com","error":"trx is not a function","level":"error","message":"Error in createBooking","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-19 11:42:52"}
+{"booking_date":"2023-12-25","email":"test@example.com","error":"trx.from is not a function","level":"error","message":"Error in createBooking","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-19 12:08:10"}
+{"booking_date":"2023-12-25","email":"test@example.com","error":"trx.from is not a function","level":"error","message":"Error in createBooking","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-19 12:08:10"}
+{"booking_date":"2023-12-25","email":"test@example.com","error":"trx.from is not a function","level":"error","message":"Error in createBooking","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-19 12:08:10"}
+{"booking_date":"2023-12-25","email":"test@example.com","error":"trx.select is not a function","level":"error","message":"Error in createBooking","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-19 12:11:19"}
+{"booking_date":"2023-12-25","email":"test@example.com","error":"trx.select is not a function","level":"error","message":"Error in createBooking","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-19 12:11:19"}
+{"booking_date":"2023-12-25","email":"test@example.com","error":"trx.select is not a function","level":"error","message":"Error in createBooking","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-19 12:11:19"}
+{"code":"SQLITE_ERROR","errno":1,"level":"error","message":"Error starting server: create table `rooms` (`id` integer not null primary key autoincrement, `name` varchar(255) not null) - SQLITE_ERROR: table `rooms` already exists","service":"hotel-booking-api","stack":"Error: create table `rooms` (`id` integer not null primary key autoincrement, `name` varchar(255) not null) - SQLITE_ERROR: table `rooms` already exists","timestamp":"2024-08-19 12:17:10"}
+{"code":"SQLITE_ERROR","errno":1,"level":"error","message":"Error starting server: create table `rooms` (`id` integer not null primary key autoincrement, `name` varchar(255) not null) - SQLITE_ERROR: table `rooms` already exists","service":"hotel-booking-api","stack":"Error: create table `rooms` (`id` integer not null primary key autoincrement, `name` varchar(255) not null) - SQLITE_ERROR: table `rooms` already exists","timestamp":"2024-08-19 12:20:05"}
+{"code":"SQLITE_CONSTRAINT","errno":19,"level":"error","message":"Error starting server: insert into `rooms` (`id`, `name`) select 1 as `id`, 'Room 1' as `name` union all select 2 as `id`, 'Room 2' as `name` - SQLITE_CONSTRAINT: UNIQUE constraint failed: rooms.id","service":"hotel-booking-api","stack":"Error: insert into `rooms` (`id`, `name`) select 1 as `id`, 'Room 1' as `name` union all select 2 as `id`, 'Room 2' as `name` - SQLITE_CONSTRAINT: UNIQUE constraint failed: rooms.id","timestamp":"2024-08-19 12:20:19"}
+{"level":"info","message":"Migrations completed successfully","service":"hotel-booking-api","timestamp":"2024-08-19 12:23:07"}
+{"level":"info","message":"Server is running on port 3000","service":"hotel-booking-api","timestamp":"2024-08-19 12:23:07"}
+{"booking_date":"2025-08-25","email":"guest@example.com","error":"Room is not available for the selected date","level":"error","message":"Error in createBooking","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-19 12:23:24"}
+{"level":"info","message":"Migrations completed successfully","service":"hotel-booking-api","timestamp":"2024-08-19 12:25:51"}
+{"level":"info","message":"Server is running on port 3000","service":"hotel-booking-api","timestamp":"2024-08-19 12:25:51"}
+{"booking_date":"2025-08-25","email":"guest@example.com","error":"Room is not available for the selected date","level":"error","message":"Error in createBooking","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-19 12:26:07"}
+{"level":"info","message":"Migrations completed successfully","service":"hotel-booking-api","timestamp":"2024-08-19 12:29:53"}
+{"level":"info","message":"Server is running on port 3000","service":"hotel-booking-api","timestamp":"2024-08-19 12:29:53"}
+{"bookingId":{"id":1},"booking_date":"2025-08-25","email":"guest@example.com","level":"info","message":"Booking created","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-19 12:29:58"}
+{"level":"info","message":"Email sent to guest@example.com: Confirm your booking at /booking/confirm/[object Object]","service":"hotel-booking-api","timestamp":"2024-08-19 12:29:58"}
+{"booking_date":"2025-08-25","email":"guest@example.com","error":"Room is not available for the selected date","level":"error","message":"Error in createBooking","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-19 12:33:37"}
+{"bookingId":{"id":2},"booking_date":"2025-08-25","email":"guest@example.com","level":"info","message":"Booking created","room_id":2,"service":"hotel-booking-api","timestamp":"2024-08-19 12:33:45"}
+{"level":"info","message":"Email sent to guest@example.com: Confirm your booking at /booking/confirm/[object Object]","service":"hotel-booking-api","timestamp":"2024-08-19 12:33:45"}
+{"level":"info","message":"Migrations completed successfully","service":"hotel-booking-api","timestamp":"2024-08-19 12:34:22"}
+{"level":"info","message":"Server is running on port 3000","service":"hotel-booking-api","timestamp":"2024-08-19 12:34:22"}
+{"bookingId":1,"booking_date":"2025-08-25","email":"guest@example.com","level":"info","message":"Booking created","room_id":2,"service":"hotel-booking-api","timestamp":"2024-08-19 12:34:26"}
+{"level":"info","message":"Email sent to guest@example.com: Confirm your booking at /booking/confirm/1","service":"hotel-booking-api","timestamp":"2024-08-19 12:34:26"}
+{"level":"info","message":"Migrations completed successfully","service":"hotel-booking-api","timestamp":"2024-08-19 12:37:04"}
+{"level":"info","message":"Server is running on port 3000","service":"hotel-booking-api","timestamp":"2024-08-19 12:37:04"}
+{"booking_date":"2025-08-25","email":"guest@example.com","error":"Room is not available for the selected date","level":"error","message":"Error in createBooking","room_id":2,"service":"hotel-booking-api","timestamp":"2024-08-19 12:37:08"}
+{"bookingId":2,"booking_date":"2025-08-25","email":"guest@example.com","level":"info","message":"Booking created","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-19 12:37:15"}
+{"level":"info","message":"Email sent to guest@example.com: Confirm your booking at /booking/confirm/2","service":"hotel-booking-api","timestamp":"2024-08-19 12:37:15"}
+{"bookingId":3,"booking_date":"2025-08-26","email":"guest@example.com","level":"info","message":"Booking created","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-19 12:38:00"}
+{"level":"info","message":"Email sent to guest@example.com: Confirm your booking at /booking/confirm/3","service":"hotel-booking-api","timestamp":"2024-08-19 12:38:00"}
+{"booking_date":"2025-08-26","email":"guest@example.com","error":"Room is not available for the selected date","level":"error","message":"Error in createBooking","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-19 12:38:06"}
+{"booking_date":"2023-12-25","email":"test@example.com","error":"trx is not a function","level":"error","message":"Error in createBooking","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-19 12:38:38"}
+{"booking_date":"2023-12-25","email":"test@example.com","error":"trx is not a function","level":"error","message":"Error in createBooking","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-19 12:38:38"}
+{"booking_date":"2023-12-25","email":"test@example.com","error":"trx is not a function","level":"error","message":"Error in createBooking","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-19 12:38:38"}
+{"level":"info","message":"Migrations completed successfully","service":"hotel-booking-api","timestamp":"2024-08-19 16:33:29"}
+{"level":"info","message":"Server is running on port 3000","service":"hotel-booking-api","timestamp":"2024-08-19 16:33:29"}
+{"bookingId":4,"booking_date":"2025-08-27","email":"guest@example.com","level":"info","message":"Booking created","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-19 16:34:01"}
+{"level":"info","message":"Email sent to guest@example.com: Confirm your booking at /booking/confirm/4","service":"hotel-booking-api","timestamp":"2024-08-19 16:34:01"}
+{"level":"info","message":"Migrations completed successfully","service":"hotel-booking-api","timestamp":"2024-08-19 16:42:05"}
+{"level":"info","message":"Server is running on port 3000","service":"hotel-booking-api","timestamp":"2024-08-19 16:42:05"}
+{"bookingId":5,"booking_date":"2025-08-28","email":"guest@example.com","level":"info","message":"Booking created","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-19 16:42:20"}
+{"level":"info","message":"Email sent to guest@example.com: Confirm your booking at /booking/confirm/5","service":"hotel-booking-api","timestamp":"2024-08-19 16:42:20"}
+{"booking_date":"2025-08-28","email":"guest@example.com","error":"Room is not available for the selected date","level":"error","message":"Error in createBooking","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-19 16:43:29"}
+{"bookingId":6,"booking_date":"2025-08-29","email":"guest@example.com","level":"info","message":"Booking created","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-19 16:43:33"}
+{"level":"info","message":"Email sent to guest@example.com: Confirm your booking at /booking/confirm/6","service":"hotel-booking-api","timestamp":"2024-08-19 16:43:33"}
+{"level":"info","message":"Migrations completed successfully","service":"hotel-booking-api","timestamp":"2024-08-19 16:43:49"}
+{"level":"info","message":"Server is running on port 3000","service":"hotel-booking-api","timestamp":"2024-08-19 16:43:49"}
+{"level":"info","message":"Migrations completed successfully","service":"hotel-booking-api","timestamp":"2024-08-19 16:44:54"}
+{"level":"info","message":"Server is running on port 3000","service":"hotel-booking-api","timestamp":"2024-08-19 16:44:54"}
+{"level":"info","message":"Migrations completed successfully","service":"hotel-booking-api","timestamp":"2024-08-19 16:45:35"}
+{"level":"info","message":"Server is running on port 3000","service":"hotel-booking-api","timestamp":"2024-08-19 16:45:35"}
+{"level":"info","message":"Migrations completed successfully","service":"hotel-booking-api","timestamp":"2024-08-19 16:46:22"}
+{"level":"info","message":"Server is running on port 3000","service":"hotel-booking-api","timestamp":"2024-08-19 16:46:22"}
+{"level":"info","message":"Migrations completed successfully","service":"hotel-booking-api","timestamp":"2024-08-19 17:04:28"}
+{"level":"info","message":"Server is running on port 3000","service":"hotel-booking-api","timestamp":"2024-08-19 17:04:28"}
+{"level":"info","message":"Migrations completed successfully","service":"hotel-booking-api","timestamp":"2024-08-19 17:06:55"}
+{"level":"info","message":"Server is running on port 3000","service":"hotel-booking-api","timestamp":"2024-08-19 17:06:55"}
+{"booking_date":"2025-08-29","email":"guest@example.com","error":"Room is not available for the selected date","level":"error","message":"Error in createBooking","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-19 17:07:34"}
+{"bookingId":7,"booking_date":"2025-08-30","email":"guest@example.com","level":"info","message":"Booking created","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-19 17:07:43"}
+{"level":"info","message":"Email sent to guest@example.com: Confirm your booking at /booking/confirm/7","service":"hotel-booking-api","timestamp":"2024-08-19 17:07:43"}
+{"level":"info","message":"Migrations completed successfully","service":"hotel-booking-api","timestamp":"2024-08-19 17:09:19"}
+{"level":"info","message":"Server is running on port 3000","service":"hotel-booking-api","timestamp":"2024-08-19 17:09:19"}
+{"booking_date":"2025-08-30","email":"guest@example.com","error":"Room is not available for the selected date","level":"error","message":"Error in createBooking","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-19 17:09:25"}
+{"bookingId":8,"booking_date":"2025-09-30","email":"guest@example.com","level":"info","message":"Booking created","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-19 17:09:34"}
+{"level":"info","message":"Email sent to guest@example.com: Confirm your booking at /booking/confirm/8","service":"hotel-booking-api","timestamp":"2024-08-19 17:09:34"}
+{"level":"info","message":"Migrations completed successfully","service":"hotel-booking-api","timestamp":"2024-08-19 17:15:59"}
+{"level":"info","message":"Server is running on port 3000","service":"hotel-booking-api","timestamp":"2024-08-19 17:15:59"}
+{"level":"info","message":"Migrations completed successfully","service":"hotel-booking-api","timestamp":"2024-08-19 17:19:39"}
+{"level":"info","message":"Server is running on port 3000","service":"hotel-booking-api","timestamp":"2024-08-19 17:19:39"}
+{"level":"info","message":"Migrations completed successfully","service":"hotel-booking-api","timestamp":"2024-08-19 17:23:03"}
+{"level":"info","message":"Server is running on port 3000","service":"hotel-booking-api","timestamp":"2024-08-19 17:23:03"}
+{"level":"info","message":"Migrations completed successfully","service":"hotel-booking-api","timestamp":"2024-08-19 17:23:35"}
+{"level":"info","message":"Server is running on port 3000","service":"hotel-booking-api","timestamp":"2024-08-19 17:23:35"}
+{"level":"info","message":"Migrations completed successfully","service":"hotel-booking-api","timestamp":"2024-08-19 17:25:40"}
+{"level":"info","message":"Server is running on port 3000","service":"hotel-booking-api","timestamp":"2024-08-19 17:25:40"}
+{"booking_date":"2025-09-30","email":"guest@example.com","error":"Room is not available for the selected date","level":"error","message":"Error in createBooking","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-19 17:25:50"}
+{"booking_date":"2025-09-31","level":"warn","message":"Booking attempt with invalid date","service":"hotel-booking-api","timestamp":"2024-08-19 17:25:56"}
+{"bookingId":9,"booking_date":"2025-09-01","email":"guest@example.com","level":"info","message":"Booking created","room_id":1,"service":"hotel-booking-api","timestamp":"2024-08-19 17:26:06"}
+{"level":"info","message":"Email sent to guest@example.com: Confirm your booking at /booking/confirm/9","service":"hotel-booking-api","timestamp":"2024-08-19 17:26:06"}
+{"level":"info","message":"Migrations completed successfully","service":"hotel-booking-api","timestamp":"2024-08-19 17:27:33"}
+{"level":"info","message":"Server is running on port 3000","service":"hotel-booking-api","timestamp":"2024-08-19 17:27:33"}
+{"level":"info","message":"Migrations completed successfully","service":"hotel-booking-api","timestamp":"2024-08-19 17:28:51"}
+{"level":"info","message":"Server is running on port 3000","service":"hotel-booking-api","timestamp":"2024-08-19 17:28:51"}
