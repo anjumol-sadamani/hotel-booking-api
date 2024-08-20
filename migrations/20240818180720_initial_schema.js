@@ -6,15 +6,10 @@ exports.up = async function(knex) {
       });
   }
 
-  const existingRooms = await knex('rooms').select('id');
-  const roomsToInsert = [
-      { id: 1, name: 'Room 1' },
-      { id: 2, name: 'Room 2' }
-  ].filter(room => !existingRooms.some(existingRoom => existingRoom.id === room.id));
-
-  if (roomsToInsert.length > 0) {
-      await knex('rooms').insert(roomsToInsert);
-  }
+  await knex('rooms').insert([
+    { id: 1, name: 'Room 1' },
+    { id: 2, name: 'Room 2' }
+]).onConflict('id').ignore();
 
   if (!(await knex.schema.hasTable('bookings'))) {
       await knex.schema.createTable('bookings', function(table) {
