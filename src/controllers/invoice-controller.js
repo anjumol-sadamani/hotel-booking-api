@@ -1,18 +1,13 @@
 const invoiceService = require("../services/invoice-service");
-const invoiceService = require("../services/invoice-service");
-const logger = require("../utils/logger");
 
 exports.getAllInvoices = async (req, res) => {
   try {
     const invoices = await invoiceService.getAllInvoices();
     res.json({ data: invoices });
   } catch (error) {
-    logger.error("Error in getAllInvoices controller", {
-      error: error.message,
-    });
     res
       .status(500)
-      .json({ error: "An error occurred while fetching invoices" });
+      .json({ error: error.message });
   }
 };
 
@@ -22,16 +17,12 @@ exports.getInvoiceById = async (req, res) => {
     const invoice = await invoiceService.getInvoiceById(invoiceId);
     res.json({ data: invoice });
   } catch (error) {
-    if (error.message === "Invoice not found") {
-      res.status(404).json({ error: "Invoice not found" });
+    if (error.message === INVOICE_NOT_FOUND) {
+      res.status(404).json({ error: INVOICE_NOT_FOUND});
     } else {
-      logger.error("Error in getInvoiceById controller", {
-        error: error.message,
-        invoiceId,
-      });
       res
         .status(500)
-        .json({ error: "An error occurred while fetching the invoice" });
+        .json({ error: error.message });
     }
   }
 };

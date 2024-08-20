@@ -1,4 +1,5 @@
 const bookingService = require("../services/booking-service");
+const { BOOKING_CREATED, ROOM_NOT_AVAILABLE, BOOKING_CONFIRMED, BOOKING_NOT_FOUND } = require("../utils/error-message");
 const logger = require("../utils/logger");
 
 exports.createBooking = async (req, res) => {
@@ -14,7 +15,7 @@ exports.createBooking = async (req, res) => {
       `Email sent to ${email}: Confirm your booking at /booking/confirm/${bookingId}`
     );
     res.status(201).json({
-      message: "Booking created",
+      message: BOOKING_CREATED,
       data: {
         booking: {
           id: bookingId,
@@ -25,7 +26,7 @@ exports.createBooking = async (req, res) => {
   } catch (error) {
     res
       .status(
-        error.message === "Room is not available for the selected date"
+        error.message === ROOM_NOT_AVAILABLE
           ? 400
           : 500
       )
@@ -78,7 +79,7 @@ exports.confirmBooking = async (req, res) => {
   try {
     const invoiceId = await bookingService.confirmBooking(bookingId);
     res.json({
-      message: "Booking confirmed and invoice created",
+      message: BOOKING_CONFIRMED,
       data: {
         invoice: {
           id: invoiceId,
@@ -86,8 +87,9 @@ exports.confirmBooking = async (req, res) => {
       },
     });
   } catch (error) {
+    console.log(error)
     res
-      .status(error.message === "Booking not found" ? 404 : 500)
+      .status(error.message === BOOKING_NOT_FOUND ? 404 : 500)
       .json({ error: error.message });
   }
 };
